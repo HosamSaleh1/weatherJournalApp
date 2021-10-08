@@ -17,34 +17,40 @@ body{
 }
 
 .holder{
-
+display: flex;
+flex-direction: column;
+padding: 0,5em;
 }
 
 .entry{
     background: rgba(59, 74, 107, .4);
+    font-size: 1em;
 }
 
 #entryHolder{
-
+border: 1px solid green;
 }
 
 #date{
-
+    color: green;
 }
 
 #temp{
-
+    color: red;
 }
 
 #content{
-
+    color: black;
 }
 
 .headline {
-
+    color: red;
+    font-size: 1em;
 }
 .title{
-
+border: 1px solid blue;
+color: white;
+font-size: 1em;
 }
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
