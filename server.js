@@ -18,6 +18,21 @@ app.use(cors())
 // Initialize the main project folder
 app.use(express.static('website'));
 
+// Get Route
+app.get('/api/projectdata',(req,res)=>{
+    res.status(200).send(projectData)
+})
+
+//Post Route
+app.post('/api/projectdata',(req,res)=>{
+    const {date,temp,content} = req.body
+    projectData[date] = {
+        temp,
+        content
+    }
+    res.status(201).send()
+})
+
 // Setup Server
 app.listen(port,()=>{
     console.log('Server is running ...')
