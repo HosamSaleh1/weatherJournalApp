@@ -19,9 +19,11 @@ body{
 .holder{
 display: flex;
 flex-direction: column;
-padding: 0,5em;
+padding: 5px;
 }
-
+#generate{
+    margin: 3px;
+}
 .entry{
     background: rgba(59, 74, 107, .4);
     font-size: 1em;

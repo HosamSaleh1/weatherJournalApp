@@ -1,6 +1,5 @@
 /* Global Variables */
-const { patch } = require('request')
-const request = require('request')
+
 // Value Elements
 const zip = document.getElementById('zip')
 const feelings = document.getElementById('feelings')
