@@ -58,7 +58,7 @@ const updateUI = async(temperature,newDate,feelings)=>{
 generate.addEventListener('click',()=>{
     weatherFetch(url,apiKey,zip.value)
     .then(temp=>{
-        return (date:newDate,temp,content:feelings.value)
+        return {date:newDate,temp,content:feelings.value}
     })
     .then(data=>{
         saveData('api/projectData',data)
