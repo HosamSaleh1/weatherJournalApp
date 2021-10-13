@@ -1,5 +1,5 @@
 // Setup empty JS object to act as endpoint for all routes
-const projectData = {};
+projectData = {};
 
 // Require Express to run server and routes
 const express = require('express')
@@ -19,18 +19,23 @@ app.use(cors())
 app.use(express.static('website'));
 
 // Get Route
-app.get('/api/projectdata',(req,res)=>{
+app.get('/getData',(req,res)=>{
     res.status(200).send(projectData)
 })
 
 //Post Route
-app.post('/api/projectdata',(req,res)=>{
+app.post('/postData',(req,res)=>{
+    // new way # projectData = { ...req.body} #
+
     const {date,temp,content} = req.body
-    projectData[date] = {
+    projectData = {
+        date,
         temp,
         content
     }
-    res.status(201).send()
+    console.log(projectData)
+    res.send(projectData)
+    // or res.end()
 })
 
 // Setup Server

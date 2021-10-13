@@ -6,7 +6,7 @@ body{
 #app{
     display: grid;
     grid-auto-rows: minmax(150px, auto);
-    /* grid-template-columns:  */
+    grid-template-columns:minmax(150px,auto) 
     height:100vh;
     background: #f23557;
     color: #f0d43a;
@@ -26,7 +26,7 @@ padding: 5px;
     margin: 3px;
 }
 .entry{
-    background: rgba(59, 74, 107, .4);
+    background: rgba(43, 57, 87, 0.664);
     font-size: 1em;
 }
 
@@ -36,14 +36,23 @@ border: 1px solid green;
 
 #date{
     color: green;
+    display: block;
+    margin: 5px;
+font-size: 1em;
 }
 
 #temp{
     color: red;
+    display: block;
+    margin: 5px;
+font-size: 1em;
 }
 
 #content{
     color: black;
+    display: block;
+    margin: 5px;
+font-size: 1em;
 }
 
 .headline {
@@ -51,7 +60,8 @@ border: 1px solid green;
     font-size: 1em;
 }
 .title{
-border: 1px solid blue;
+    display: block;
+/* border: 1px solid blue; */
 color: white;
 font-size: 1em;
 }
@@ -86,9 +96,7 @@ button{
 button:hover{
     background-color: black;
 }
-button:focus{
-    background-color: gray;
-}
+
 h1{
     font-size: 36px;
 }
