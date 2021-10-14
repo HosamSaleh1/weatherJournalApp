@@ -52,10 +52,12 @@ const saveWeatherData = async(data)=>{
 }
 
 // Dynamically Update UI
-const updateUI = (date,tempe,feelings)=>{
-    datee.innerHTML =  'The Date Is : ' + date
-    temp.innerHTML =  'The Temperature Is : ' + tempe
-    content.innerHTML =  'And It Feeling : ' + feelings
+const updateUI = async ()=>{
+    Const data = Await getWeatherData()
+    Const allData = Await data.json()
+    datee.innerHTML =  'The Date Is : ' + allData.date
+    temp.innerHTML =  'The Temperature Is : ' + allData.tempe
+    content.innerHTML =  'And It Feeling : ' + allData.feelings
 }
 
 // Adding Event Listener
@@ -74,14 +76,8 @@ generate.addEventListener('click',async ()=>{
         .then((Temperature)=>{
             
             saveWeatherData({date:newDate,temp:Temperature,content:feelings})
-            updateUI(newDate,Temperature,feelings)
+            updateUI()
         })
-        // .then(()=>{
-        //     // const newData = getWeatherData()
-        // })
-        // .then((data)=>{
-        //     console.log(newDate,data,feelings)
-        // })
         .catch((e)=>{
             throw e
         })
